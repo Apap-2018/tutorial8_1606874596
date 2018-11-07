@@ -24,6 +24,13 @@
             </ul>
             <ul class="navbar-nav pull-right">
                 <li class="nav-item active">
+                    <form th:action="@{/user/updatePassword/{username}(username=${#httpServletRequest.remoteUser})}" method="GET">
+                        <div>
+                            <button type="submit" class="btn btn-primary">Ganti Password</button>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" th:href="@{/logout}">Logout</a>
                 </li>
             </ul>
